@@ -26,8 +26,6 @@ allow uncrypt ota_package_file:file rw_file_perms;
 unix_socket_connect(uncrypt, uncrypt, uncrypt)
 
 # Raw writes to block device
-allow uncrypt self:global_capability_class_set sys_admin;
-allow uncrypt self:global_capability_class_set fowner;
 allow uncrypt self:global_capability_class_set sys_rawio;
 allow uncrypt misc_block_device:blk_file w_file_perms;
 allow uncrypt block_device:dir r_dir_perms;
